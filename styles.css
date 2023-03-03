@@ -1,0 +1,118 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+article {
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.212);
+    
+}
+
+
+/** grid layout **/
+.grid {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+    grid-template-areas: 'top top middle end'
+    'topdown middly middly end';
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+
+
+.head {
+    max-width: 260px;
+}
+.head::after {
+    clear: both;
+    display: table;
+}
+.break {
+    display: block;
+    opacity: 0.5;
+    font-size: 13px;
+}
+.photo {
+    float: left;
+    margin-right: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+}
+.article-1 {
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 81%);
+    position: relative;
+    grid-area: top;
+}
+
+.floater {
+    font-size: 30rem;
+    position: absolute;
+    right: 20px;
+    top: -146px;
+    opacity: 0.4;
+}
+
+.received {
+    font-weight: bolder;
+}
+.was {
+    opacity: 0.7;
+    font-size: small;
+}
+.article-2 {
+   background-color: hsl(217, 19%, 35%);
+   color: hsl(0, 0%, 81%); 
+}
+.article-3 {
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+}
+
+.article-4 {
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 81%);
+    grid-area: middly;
+}
+.article-5 {
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+    grid-area: end;
+    max-width: 250px;
+}
+
+.attribution {
+    padding: 30px;
+}
+
+@media screen and (max-width: 550px){
+    .grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        
+    }
+    article {
+       
+        max-width: 340px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .article-5 {
+        max-width: 340px;
+    }
+}
+
